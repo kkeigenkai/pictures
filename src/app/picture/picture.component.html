@@ -1,0 +1,27 @@
+<div class="picture__wrap">
+    <div class="picture__block">
+        <form class="picture__block-form">
+            <mat-form-field class="picture__input">
+                <mat-label>Ссылка на картинку</mat-label>
+                <input matInput placeholder="картинка" name="name" [(ngModel)]="picture" (change)="getImg()">
+            </mat-form-field>
+        </form>
+
+        <canvas #canvas (click)="getPosition($event)" width="400" ></canvas>
+
+        <div class="picture" *ngIf="picture">
+            <div class="picture__output">
+                <p class="picture__output-info">{{size}}</p>
+                <div class="picture__info">
+                    <div class="picture__info-block" [style.backgroundColor]="Hex"></div>
+                    <div class="picture__info-text">
+                        <p class="picture__info-position">{{position}}</p>
+                        <p *ngIf="Hex" class="picture__info-hex">HEX: {{Hex}}</p>
+                        <p *ngIf="RGB" class="picture__info-rgb">RGB: {{RGB}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
