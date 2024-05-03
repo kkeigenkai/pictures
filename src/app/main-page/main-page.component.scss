@@ -1,3 +1,83 @@
-.main{
+.main {
     height: 100%;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    &-wrap {
+        width: 100vw;
+        height: 60px;
+        background-color: gray;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+}
+
+.picture {
+    &__input {
+        width: 400px;
+    }
+
+    &__button {
+        margin-left: 20px;
+        padding: 5px 10px;
+        background-color: rgb(98, 97, 97);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lightgrey;
+        }
+    }
+
+}
+
+.info {
+    display: flex;
+    align-items: center;
+
+    &-wrap {
+        width: 100vw;
+        height: 35px;
+        background-color: gray;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        margin-left: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    &__block {
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-left: 10px;
+        margin-bottom: 12px;
+    }
+
+    &__button {
+        margin-right: 20px;
+    }
+}
+
+.delete__button {
+    margin-left: 20px;
+}
+
+.hidden__block{
+    height: 80px;
+    width: 100%;
+    position: hidden;
 }
